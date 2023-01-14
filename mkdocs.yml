@@ -1,0 +1,72 @@
+# Project Information
+site_name: 蓝桥杯备赛文档
+site_author: 墨染(MoRan)
+site_description: 蓝桥杯备赛历程及知识点整理
+site_url: https://saudadestenko.github.io/docs_for_lanqiao/
+
+# Repository
+repo_name: docs_for_lanqiao
+repo_url: https://github.com/SaudadesTenko/docs_for_lanqiao
+
+# Contents
+nav:
+  - 首页: 'index.md'
+  - 关于: 'about.md'
+
+# Theme
+theme:
+  name: 'material'
+  language: zh
+  icon:
+    logo: fontawesome/solid/chart-simple
+    edit: material/file-edit-outline
+  favicon: assets/favicon.png
+  font:
+    # 谷歌字体
+    text: Roboto
+    # 等宽字体（用于代码）
+    code: Roboto Mono
+  # 默认原色
+  primary: indigo
+  palette:
+    # 鼠标 Hover 颜色
+    - accent: indigo
+    # 浅色模式
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    # 深色模式
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: 切换到灯光模式
+  features:
+    # 导航选项卡
+    - navigation.tabs
+    # 即时加载
+    - navigation.instant
+    # 启用目录锚点跟随
+    - toc.follow
+    # 返回顶部按钮
+    - navigation.top
+  plugins:
+    - # 搜索
+    - search:
+      # 增加中文支持
+      jieba_dict: dict.txt
+
+
+# Copyright
+copyright: Copyright © 2022 墨染
+
+# Customization
+extra_css:
+  - stylesheet/extra.css
+extra_javascript:
+  - javascript/extra.js
+extra:
+  # 跳转链接
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SaudadesTenko
