@@ -85,8 +85,6 @@ theme:
       jieba_dict: dict.txt
       # 标记器分隔符设置
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-      # 搜索突出显示
-
 
 # Copyright
 copyright: Copyright © 2022 墨染
