@@ -18,7 +18,7 @@ theme:
   name: 'material'
   language: zh
   icon:
-    logo: fontawesome/solid/chart-simple
+    logo: material/matrix
     edit: material/file-edit-outline
   favicon: assets/favicon.png
   font:
@@ -26,35 +26,66 @@ theme:
     text: Roboto
     # 等宽字体（用于代码）
     code: Roboto Mono
-  # 默认原色
-  primary: indigo
   palette:
-    # 鼠标 Hover 颜色
-    - accent: indigo
     # 浅色模式
     - scheme: default
+      # 鼠标 Hover 颜色
+      accent: indigo
+      # 默认原色
+      primary: indigo
       toggle:
         icon: material/weather-sunny
         name: 切换到深色模式
     # 深色模式
     - scheme: slate
+      # 鼠标 Hover 颜色
+      accent: indigo
+      # 默认原色
+      primary: indigo
       toggle:
         icon: material/weather-night
         name: 切换到灯光模式
   features:
-    # 导航选项卡
+    # 显示编辑此页面按钮与查看源代码按钮
+    - content.action.edit
+    - content.action.view
+    # 启用代码注释
+    - content.code.annotate
+    # 启用代码复制按钮
+    - content.code.copy
+    # 显示工具提示语
+    - content.tooltips
+    # 启用公告栏
+    # - announce.dismiss
+    # 显示页脚中的上一个和下一个按钮
+    - navigation.footer
+    # 文章顶级标题部分将在侧边栏中呈现，在移动设备上保持为二级目录
+    - navigation.sections
+    # 显示顶部导航选项卡
     - navigation.tabs
-    # 即时加载
-    - navigation.instant
+    # 启用粘滞选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
+    # - navigation.tabs.sticky
+    # 显示返回顶部按钮
+    - navigation.top
+    # 启用定位点跟踪后，地址栏中的 URL 将使用内容列表中突出显示的活动定位点自动更新
+    - navigation.tracking
+    # 搜索突出显示
+    - search.highlight
+    # 启动搜索共享按钮，该按钮允许深层链接到当前搜索查询的结果的具体地址
+    - search.share
+    # 启用搜索建议，搜索将显示最后一个单词的最可能完成情况，使用右方向键自动补全
+    - search.suggest
     # 启用目录锚点跟随
     - toc.follow
-    # 返回顶部按钮
-    - navigation.top
+
   plugins:
     - # 搜索
     - search:
-      # 增加中文支持
+      # 增加汉语文本分割库
       jieba_dict: dict.txt
+      # 标记器分隔符设置
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      # 搜索突出显示
 
 
 # Copyright

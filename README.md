@@ -12,6 +12,13 @@ pip install mkdocs
 pip install mkdocs-material
 ```
 
+### 下载汉语文本分割库
+
+```
+pip install jieba
+```
+
+
 ### 启动本地服务
 
 ```
