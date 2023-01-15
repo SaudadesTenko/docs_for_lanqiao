@@ -8,11 +8,6 @@ site_url: https://saudadestenko.github.io/docs_for_lanqiao/
 repo_name: docs_for_lanqiao
 repo_url: https://github.com/SaudadesTenko/docs_for_lanqiao
 
-# Contents
-nav:
-  - 首页: 'index.md'
-  - 关于: 'about.md'
-
 # Theme
 theme:
   name: 'material'
@@ -77,7 +72,6 @@ theme:
     - search.suggest
     # 启用目录锚点跟随
     - toc.follow
-
   plugins:
     - # 搜索
     - search:
@@ -85,6 +79,7 @@ theme:
       jieba_dict: dict.txt
       # 标记器分隔符设置
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  custom_dir: material/.overrides
 
 # Copyright
 copyright: Copyright © 2022 墨染
@@ -99,3 +94,12 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/SaudadesTenko
+
+# Contents
+nav:
+  - 首页: 'index.md'
+  - 基础: 'basic.md'
+  - 进阶: 'advanced.md'
+  - 提高: 'increase.md'
+  - 模块: 'module.md'
+  - 关于: 'about.md'
