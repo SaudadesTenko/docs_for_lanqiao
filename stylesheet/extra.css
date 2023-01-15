@@ -1,3 +1,8 @@
 .md-header__inner .md-header__title {
     margin-left: .1rem;
 }
+
+.md-main__inner {
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+}
