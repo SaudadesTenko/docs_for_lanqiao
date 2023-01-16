@@ -18,9 +18,9 @@ theme:
   favicon: assets/favicon.png
   font:
     # 谷歌字体
-    text: Roboto
+    text: Serif
     # 等宽字体（用于代码）
-    code: Roboto Mono
+    code: Consolas
   palette:
     # 浅色模式
     - scheme: default
@@ -79,6 +79,7 @@ theme:
       jieba_dict: dict.txt
       # 标记器分隔符设置
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+    - privacy
   custom_dir: material/.overrides
 
 # Copyright
