@@ -49,8 +49,6 @@ theme:
     - content.code.copy
     # 显示工具提示语
     - content.tooltips
-    # 启用公告栏
-    # - announce.dismiss
     # 显示页脚中的上一个和下一个按钮
     - navigation.footer
     # 文章顶级标题部分将在侧边栏中呈现，在移动设备上保持为二级目录
@@ -99,7 +97,6 @@ extra:
 
 # Extensions
 markdown_extensions:
-  # Python Markdown
   # 启用缩写
   - abbr
   # 启用标注：注意，添加标题，删除标题，可折叠快
@@ -113,7 +110,7 @@ markdown_extensions:
   # 允许在 HTML 中编写 Markdown
   - md_in_html
   - toc:
-      # 目录扩展：自动从文档生成目录
+      # 目录扩展：自动从文档生成目录并显示锚点
       permalink: ⚓︎
   # 渲染块和内联块方程，与 MathJax 集成
   - pymdownx.arithmatex:
@@ -121,9 +118,11 @@ markdown_extensions:
   # 格式支持：加粗，斜体，删除线
   - pymdownx.betterem:
       smart_enable: all
-  # 插入功能，标记功能，波浪号功能
+  # 插入功能
   - pymdownx.caret
+  # 标记功能
   - pymdownx.mark
+  # 波浪号功能
   - pymdownx.tilde
   # 使生成的标注可折叠
   - pymdownx.details
