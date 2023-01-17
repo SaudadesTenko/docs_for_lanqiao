@@ -3,10 +3,9 @@ site_name: 蓝桥杯备赛文档
 site_author: 墨染(MoRan)
 site_description: 蓝桥杯备赛历程及知识点整理
 site_url: https://saudadestenko.github.io/docs_for_lanqiao/
-
-# Repository
 repo_name: docs_for_lanqiao
 repo_url: https://github.com/SaudadesTenko/docs_for_lanqiao
+copyright: Copyright © 2022 墨染
 
 # Theme
 theme:
@@ -18,9 +17,9 @@ theme:
   favicon: assets/favicon.png
   font:
     # 谷歌字体
-    text: Serif
+    text: Ubuntu
     # 等宽字体（用于代码）
-    code: Consolas
+    code: Ubuntu Mono
   palette:
     # 浅色模式
     - scheme: default
@@ -58,8 +57,6 @@ theme:
     - navigation.sections
     # 显示顶部导航选项卡
     - navigation.tabs
-    # 启用粘滞选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-    # - navigation.tabs.sticky
     # 显示返回顶部按钮
     - navigation.top
     # 启用定位点跟踪后，地址栏中的 URL 将使用内容列表中突出显示的活动定位点自动更新
@@ -79,22 +76,80 @@ theme:
       jieba_dict: dict.txt
       # 标记器分隔符设置
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-    - privacy
+  # 覆写文件
   custom_dir: material/.overrides
 
-# Copyright
-copyright: Copyright © 2022 墨染
-
-# Customization
+# 用户自定义加载 CSS
 extra_css:
-  - stylesheet/extra.css
+  - stylesheets/extra.css
+# 用户自定义加载 JS
 extra_javascript:
-  - javascript/extra.js
+  - javascripts/extra.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.js?features=es6
+  - https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/mathjax/3.2.0/es5/tex-mml-chtml.js
+# 用户自定义
 extra:
-  # 跳转链接
+  # 社交链接
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/SaudadesTenko
+    - icon: logo
+      link: https://squidfunk.github.io/mkdocs-material/
+
+# Extensions
+markdown_extensions:
+  # Python Markdown
+  # 启用缩写
+  - abbr
+  # 启用标注：注意，添加标题，删除标题，可折叠快
+  - admonition
+  # 启用属性：批注，网格，按钮，工具提示，带颜色的图标，图标与动画结合使用，图像对齐，图像延迟加载
+  - attr_list
+  # 使用定义列表：使用无序列表，使用有序列表，使用定义列表，使用任务列表
+  - def_list
+  # 启用脚注
+  - footnotes
+  # 允许在 HTML 中编写 Markdown
+  - md_in_html
+  - toc:
+      # 目录扩展：自动从文档生成目录
+      permalink: ⚓︎
+  # 渲染块和内联块方程，与 MathJax 集成
+  - pymdownx.arithmatex:
+      generic: true
+  # 格式支持：加粗，斜体，删除线
+  - pymdownx.betterem:
+      smart_enable: all
+  # 插入功能，标记功能，波浪号功能
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  # 使生成的标注可折叠
+  - pymdownx.details
+  # 表情符号拓展
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # 增加代码块语法高亮
+  - pymdownx.highlight:
+      anchor_linenums: true
+  # 增加内联代码块语法高亮
+  - pymdownx.inlinehilite
+  # 智能符号扩展：将一些字符序列转换为其相应的符号，例如版权符号或分数
+  - pymdownx.smartsymbols
+  # 此扩展允许代码和内容块彼此之间的任意嵌套，包括警告，选项卡，列表和所有其他元素
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # 启用选项卡式扩展允许使用内容选项卡
+  - pymdownx.tabbed:
+      alternate_style: true
+  # 任务列表拓展
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 # Contents
 nav:
