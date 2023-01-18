@@ -112,8 +112,10 @@ markdown_extensions:
   - footnotes
   # 启用根据此页文章标题级别生成右侧目录
   - toc:
-      # 标题的末尾添加锚链接
+      # 标题的末尾添加锚点
       permalink: ⚓︎
+      # 锚点悬停显示名称
+      permalink_title: 锚点
   # 启用表格
   - tables
   # 启用渲染块和内联块，集成 MathJax
