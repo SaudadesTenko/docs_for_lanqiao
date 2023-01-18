@@ -40,8 +40,9 @@ theme:
         icon: material/weather-night
         name: 切换到灯光模式
   features:
-    # 显示编辑此页面按钮与查看源代码按钮
+    # 显示编辑此页面按钮
     - content.action.edit
+    # 显示查看源代码按钮
     - content.action.view
     # 启用代码注释
     - content.code.annotate
@@ -80,13 +81,15 @@ theme:
 # 用户自定义加载 CSS
 extra_css:
   - stylesheets/extra.css
+
 # 用户自定义加载 JS
 extra_javascript:
   - javascripts/extra.js
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.js?features=es6
   - https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/mathjax/3.2.0/es5/tex-mml-chtml.js
-# 用户自定义
+
+# 用户其他自定义
 extra:
   # 社交链接
   social:
@@ -99,54 +102,48 @@ extra:
 markdown_extensions:
   # 启用缩写
   - abbr
-  # 启用标注：注意，添加标题，删除标题，可折叠快
+  # 启用标注：注意，抽象，信息，提示，成功，问题，警告，失败，危险，错误，例子，告诫
   - admonition
-  # 启用属性：批注，网格，按钮，工具提示，带颜色的图标，图标与动画结合使用，图像对齐，图像延迟加载
+  # 标注功能的增强：使生成的标注可折叠
+  - pymdownx.details
+  # 启用属性：使用批注，使用网格，添加按钮，添加工具提示，使用带颜色的图标，将图标与动画结合使用，图像对齐，图像延迟加载
   - attr_list
-  # 使用定义列表：使用无序列表，使用有序列表，使用定义列表，使用任务列表
-  - def_list
   # 启用脚注
   - footnotes
-  # 允许在 HTML 中编写 Markdown
-  - md_in_html
+  # 启用根据此页文章标题级别生成右侧目录
   - toc:
-      # 目录扩展：自动从文档生成目录并显示锚点
+      # 标题的末尾添加锚链接
       permalink: ⚓︎
-  # 渲染块和内联块方程，与 MathJax 集成
+  # 启用表格
+  - tables
+  # 启用渲染块和内联块，集成 MathJax
   - pymdownx.arithmatex:
       generic: true
-  # 格式支持：加粗，斜体，删除线
+  # 此扩展允许代码和代码块彼此之间的任意嵌套，包括使用批注，使用代码块，使用内容选项卡等
+  - pymdownx.superfences
+  # BetterEm 是一个 Python Markdown 扩展的拓展，旨在改善粗体和斜体处理
   - pymdownx.betterem:
       smart_enable: all
   # 插入功能
   - pymdownx.caret
-  # 标记功能
+  # 荧光笔标记功能
   - pymdownx.mark
-  # 波浪号功能
+  # 启用 Markdown 删除语法与下标语法
   - pymdownx.tilde
-  # 使生成的标注可折叠
-  - pymdownx.details
   # 表情符号拓展
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   # 增加代码块语法高亮
-  - pymdownx.highlight:
-      anchor_linenums: true
+  - pymdownx.highlight
   # 增加内联代码块语法高亮
   - pymdownx.inlinehilite
-  # 智能符号扩展：将一些字符序列转换为其相应的符号，例如版权符号或分数
+  # 智能符号扩展：添加了用于创建特殊字符（如商标、箭头、分数等）的语法
   - pymdownx.smartsymbols
-  # 此扩展允许代码和内容块彼此之间的任意嵌套，包括警告，选项卡，列表和所有其他元素
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  # 启用选项卡式扩展允许使用内容选项卡
+  # 启用选项卡
   - pymdownx.tabbed:
       alternate_style: true
-  # 任务列表拓展
+  # 启用任务列表
   - pymdownx.tasklist:
       custom_checkbox: true
 
